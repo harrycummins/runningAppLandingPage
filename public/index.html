@@ -16,162 +16,120 @@
 
   <style>
     :root {
-      --accent-green: #d4edda;
-      --primary-green: #28a745;
+      --primary-green: #155724;
+      --accent-green: #1f3d1f;
+      --light-green: #28a745;
     }
 
     body {
-      scroll-behavior: smooth;
+      background-color: var(--accent-green);
+      color: white;
       font-family: 'Poppins', sans-serif;
     }
 
-    h1, h2, h3, h4, h5 {
-      font-weight: 600;
+    .navbar {
+      background-color: var(--primary-green);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .btn-success {
-      background-color: var(--primary-green);
-      border: none;
+      background-color: var(--light-green);
+      border-color: var(--light-green);
+      color: white;
+    }
+
+    .btn-outline-success {
+      border-color: var(--light-green);
+      color: white;
     }
 
     .section-green {
-      background-color: var(--accent-green);
-    }
-
-    /* .video-container {
-      position: relative;
-      width: 100%;
-      height: 300px; 
-      overflow: hidden;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } */
-
-    /* .video-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background-color: var(--primary-green);
       color: white;
-      font-size: 48px;
-      font-weight: bold;
-      text-align: center;
-      width: 100%;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-    } */
+      padding: 50px 0;
+    }
 
     .landing-section {
-      padding: 80px 0;
-      background-color: #f8f9fa;
-    }
-
-    .landing-section h1 {
-      font-size: 2.5rem;
-    }
-
-    .landing-section p {
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-
-    .large-image {
-      width: 90%;
-      max-width: 450px;
-      height: auto;
-    }
-
-    .card {
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature-icon {
-      font-size: 40px;
-      color: var(--primary-green);
-      margin-bottom: 15px;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-    }
-
-    .navbar-brand img {
-      height: 40px;
-      margin-right: 10px;
+      padding: 100px 0;
     }
 
     .split-section {
+      background-color: var(--accent-green);
       padding: 80px 0;
     }
 
-    .split-section img {
-      max-width: 100%;
-      border-radius: 10px;
+    .social-section {
+      background-color: var(--primary-green);
+      color: white;
+      padding: 40px 0;
     }
-    .small-image {
-  width: 150px; /* Adjust size as needed */
-  height: auto;
-}
 
+    .social-section a {
+      text-decoration: none;
+    }
+
+    .social-section i {
+      color: white;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .social-section i:hover {
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <img src="rexy.jpg" alt="PaceMate Logo" style="height: 60px;" class="d-inline-block align-text-top">
-
-      <span class="fs-4 fw-bold">Run With Rexy</span>
+      <span class="fs-4 fw-bold text-white">Run With Rexy</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-        <li class="nav-item"><a class="nav-link" href="#info">More Info</a></li>
-        <li class="nav-item"><a class="nav-link" href="/googleForm">Google Form</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#info">More Info</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero / Landing -->
-<section class="landing-section mt-5 pt-5">
+<!-- Hero Section -->
+<section class="landing-section text-center">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      <div class="col-md-6 text-md-start">
         <h1>Run. Collect. Befriend.</h1>
-        <p>Turn your daily jogs into a creature collecting adventure.</p>
+        <p>Turn your daily jogs into a creature-collecting adventure.</p>
+
+        <!-- Social Media Links -->
+        <div class="mt-4">
+          <h5>Follow Us on Social Media</h5>
+          <p>Stay updated and join our community!</p>
+          <div class="d-flex gap-3">
+            <a href="https://www.instagram.com/runwithrexy?igsh=dmtmNWwwb292bW8x&utm_source=qr" target="_blank">
+              <i class="fab fa-instagram fa-2x text-white"></i>
+            </a>
+            <a href="https://www.tiktok.com/@run_with_rexy?_t=ZN-8wUEoY15Npu&_r=1" target="_blank">
+              <i class="fab fa-tiktok fa-2x text-white"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 text-center">
-      <img src="imageOfEggScreen.png" alt="App screenshot" class="w-50">
+      <div class="col-md-6 text-center">
+        <img src="imageOfEggScreen.png" alt="App screenshot" class="img-fluid" style="max-width: 30%; height: auto;">
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="text-center py-5 section-green">
+<!-- Call to Action -->
+<section class="text-center section-green">
   <div class="container">
     <h2 class="mb-4">Track your runs. Collect creatures. Stay motivated.</h2>
     <a href="#features" class="btn btn-success btn-lg me-2">Explore Features</a>
@@ -180,34 +138,28 @@
 </section>
 
 <!-- Features -->
-<section class="py-5" id="features" style="background: linear-gradient(135deg, #e8f5e9, #d0f0c0);">
+<section id="features" class="py-5 section-green">
   <div class="container">
-    <h2 class="text-center mb-5 display-5 fw-bold text-success">Key Features:</h2>
+    <h2 class="text-center mb-5 display-5 fw-bold">Key Features:</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 bg-white rounded-4 shadow text-center h-100">
-          <div class="feature-icon mb-3 text-success">
-            <i class="fas fa-bolt"></i>
-          </div>
+        <div class="p-4 bg-white rounded-4 shadow text-center h-100">
+          <i class="fas fa-bolt feature-icon text-success"></i>
           <h4 class="fw-bold">Run Tracking</h4>
-          <p class="text-muted">Track your daily runs seeing your speed, distance, calories and locaion on a map!</p>
+          <p class="text-muted">Track your speed, distance, calories, and location on a map!</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 bg-white rounded-4 shadow text-center h-100">
-          <div class="feature-icon mb-3 text-success">
-            <i class="fas fa-shield-alt"></i>
-          </div>
+        <div class="p-4 bg-white rounded-4 shadow text-center h-100">
+          <i class="fas fa-shield-alt feature-icon text-success"></i>
           <h4 class="fw-bold">New Friends!</h4>
-          <p class="text-muted">Running and keeping a routine means you can unlock new pals!</p>
+          <p class="text-muted">Stay consistent and unlock new pals!</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 bg-white rounded-4 shadow text-center h-100">
-          <div class="feature-icon mb-3 text-success">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h4 class="fw-bold">One more feature </h4>
+        <div class="p-4 bg-white rounded-4 shadow text-center h-100">
+          <i class="fas fa-mobile-alt feature-icon text-success"></i>
+          <h4 class="fw-bold">One more feature</h4>
           <p class="text-muted">.</p>
         </div>
       </div>
@@ -215,66 +167,20 @@
   </div>
 </section>
 
-<!-- Split Info Section -->
-<section id="info" class="split-section bg-light">
+<!-- Info Section -->
+<section id="info" class="split-section text-white">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
-        <img src="varient.png" alt="App analytics" class="img-fluid" style="max-height: 500px;">
+        <img src="varient.png" alt="App analytics" class="img-fluid" style="max-height: 500px; border-radius: 10px;">
       </div>
       <div class="col-md-6">
-        <h3>Track Your Progress</h3>
+        <h3 class="fw-bold">Track Your Progress</h3>
         <p>Visualize your performance, routes, and achievements with our in-app dashboard. Stay motivated and improve with real-time feedback and weekly summaries.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Testimonials -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5">What Our Users Say</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="testimonial">
-          <p>“Run with Rexy keeps me running every morning—love the creature system!”</p>
-          <strong>— Alex R.</strong>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial">
-          <p>“It’s like Pokémon Go meets fitness. My kids even use it!”</p>
-          <strong>— Jamie K.</strong>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial">
-          <p>“I’ve stayed consistent for 3 months thanks to this app!”</p>
-          <strong>— Morgan L.</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- App Download -->
-<section class="text-center py-5 section-green">
-  <div class="container">
-    <h2 class="mb-4">Download the App</h2>
-    <p class="lead">Available on iOS and Android</p>
-    <a href="#"><img src="appstore.png" alt="App Store" class="me-3" style="height:60px;"></a>
-    <a href="#"><img src="googleplay.png" alt="Google Play" style="height:60px;"></a>
-  </div>
-</section>
-
-<!-- Video -->
-<!-- <div class="video-container mt-5">
-  <video autoplay loop muted playsinline>
-    <source src="placeholder.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="video-overlay">The Running App</div>
-</div> -->
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
